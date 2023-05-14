@@ -16,8 +16,8 @@ public class CompareToTester {
     @Test
     void test() {
         for (int i = 1; i <= 1000; i++) {
-            String randStr1 = randomString(2, true, true);
-            String randStr2 = randomString(2, true, true);
+            String randStr1 = randomString(5, true, true);
+            String randStr2 = randomString(5, true, true);
             int result = randStr1.compareTo(randStr2);
             if (result == 0) {
                 System.out.println("---------test " + i + " is successful");

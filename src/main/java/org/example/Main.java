@@ -31,7 +31,7 @@ public class Main {
         System.out.println(randomString(10, true, true)); // И латинские буквы, и числа
         System.out.println(randomString(10, true, false)); // Только латинские буквы
         System.out.println(randomString(10, false, true)); // Только числа
-        System.out.println(randomString(10, false, false)); // Пустая строка
+        System.out.println(randomString(10, false, false)); // Хотя бы один параметр должен быть true
     }
 }
 

@@ -46,9 +46,12 @@ public class StringOperations {
     // Если f = true и k = true, то строка содержит и латинские буквы, и числа.
     // Если f = true и k = false, то строка содержит только латинские буквы.
     // Если f = false и k = true, то строка содержит только числа.
-    // Если f = false и k = false, то метод выдаёт пустую строку.
+    // Если f = false и k = false, то метод возвращает строку, сообщающую о том, что нужно иметь хотя бы один параметр = true.
     public static String randomString(int n, boolean f, boolean k) {
-        String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (!f & !k) {
+            return "Хотя бы один параметр должен быть true";
+        }
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
         String nums = "0123456789";
         Random r = new Random();
         String output = "";
