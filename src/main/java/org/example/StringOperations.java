@@ -10,7 +10,7 @@ public class StringOperations {
     // Код метода для основной задачи 4
     // Метод stringComparison лексикографически сравнивает две строки между собой.
     // Входными параметрами данного метода являются две строки: word1 и word2.
-    // Метод не возвращает никаких значений.
+    // Метод возвращает целочисленное значение.
     // В методе происходит сначала поиск наименьшего количества символов среди двух строк minLength.
     // Далее происходит линейный поиск в диапазоне minLength, где по индексу i сравниваются символы word1 и word2.
     // Если символ word1 и word2 под индексом i не совпадают, то происходит разность между ASCII значениями
@@ -18,21 +18,20 @@ public class StringOperations {
     // Если в диапазоне minLength не было найдено не схожих между собой символов в word1 и word2,
     // то метод продолжается и происходит условие, проверяющее какая строка по количеству символов короче другой.
     // Если короче word1, то выводится результат -1. Если короче word2, то 1. Если строки равны, то 0.
-    public static void stringComparison(String word1, String word2) {
+    public static int stringComparison(String word1, String word2) {
         int minLength = min(word1.length(), word2.length());
         for (int i = 0; i < minLength; i++) {
             if (word1.charAt(i) != word2.charAt(i)) {
                 int value = (int) word1.charAt(i) - (int) word2.charAt(i);
-                System.out.println(value);
-                return;
+                return value;
             }
         }
         if (word1.length() < word2.length()) {
-            System.out.println(-1);
+            return -1;
         } else if (word1.length() > word2.length()) {
-            System.out.println(1);
-        } else if (word1.length() == word2.length()) {
-            System.out.println(0);
+            return 1;
+        } else {
+            return 0;
         }
     }
 
