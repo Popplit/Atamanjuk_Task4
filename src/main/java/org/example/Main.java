@@ -12,19 +12,19 @@ public class Main {
         System.out.println("Задача 4:");
         String strOne = "AECACEC";
         String strTwo = "AECACA";
-        stringComparison(strOne, strTwo); // Первая строка больше второй на 4
+        System.out.println(stringComparison(strOne, strTwo)); // Первая строка больше второй на 4
         strOne = "AECAA";
         strTwo = "AECADA";
-        stringComparison(strOne, strTwo); // Первая строка меньше второй на -3
+        System.out.println(stringComparison(strOne, strTwo)); // Первая строка меньше второй на -3
         strOne = "AECAA";
         strTwo = "AECAA";
-        stringComparison(strOne, strTwo); // Строки равны
+        System.out.println(stringComparison(strOne, strTwo)); // Строки равны
         strOne = "AECAA";
         strTwo = "AECAAC";
-        stringComparison(strOne, strTwo); // Первая строка достигла конца
+        System.out.println(stringComparison(strOne, strTwo)); // Первая строка достигла конца
         strOne = "AECAAC";
         strTwo = "AECAA";
-        stringComparison(strOne, strTwo); // Вторая строка достигла конца
+        System.out.println(stringComparison(strOne, strTwo)); // Вторая строка достигла конца
 
         // Проверка пункта 4.1
         System.out.println("Пункт 4.1:");
